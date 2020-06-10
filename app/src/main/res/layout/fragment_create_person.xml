@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="@dimen/def_padding"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <EditText
+        android:id="@+id/dlg_person__first_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/first_name"
+        android:inputType="textShortMessage"
+        android:lines="1"
+        android:padding="@dimen/def_padding"
+        android:layout_margin="@dimen/def_padding"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/dlg_person__last_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/last_name"
+        android:layout_margin="@dimen/def_padding"
+        android:inputType="textShortMessage"
+        android:lines="1"
+        android:padding="@dimen/def_padding"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dlg_person__first_name" />
+
+    <EditText
+        android:id="@+id/dlg_person__father_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/father_name"
+        android:layout_margin="@dimen/def_padding"
+        android:inputType="textShortMessage"
+        android:lines="1"
+        android:padding="@dimen/def_padding"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dlg_person__last_name" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/dlg_person__diagnosis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/def_padding"
+
+        android:padding="@dimen/def_padding"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dlg_person__father_name"
+        app:cardElevation="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Диагноз" />
+
+            <com.jaredrummler.materialspinner.MaterialSpinner
+                android:id="@+id/frg_create_person__spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                app:ms_arrow_tint="@color/spinner_arrow"
+                app:ms_background_selector="@drawable/spinner_back"
+
+                app:ms_dropdown_max_height="300dp"
+                app:ms_padding_left="0dp"
+                app:ms_popup_padding_bottom="@dimen/def_padding"
+                app:ms_popup_padding_left="@dimen/def_padding"
+                app:ms_popup_padding_top="@dimen/def_padding"
+                app:ms_text_color="@android:color/black" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/dlg_person__ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/def_padding"
+        android:padding="@dimen/def_padding"
+        android:text="@string/ok"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dlg_person__diagnosis" />
+
+    <TextView
+        android:id="@+id/dlg_person__back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/def_padding"
+        android:padding="@dimen/def_padding"
+        android:text="@string/back"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dlg_person__diagnosis" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

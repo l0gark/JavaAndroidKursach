@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/navigation_ward_list">
+
+    <fragment
+        android:id="@+id/navigation_ward_list"
+        android:name="com.loginov.hospital.main.ward.list.WardListFragment"
+        android:label="@string/title_ward"
+        tools:layout="@layout/fragment_ward_list">
+        <action
+            android:id="@+id/action_navigation_ward_list_to_navigation_ward"
+            app:destination="@id/navigation_ward"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_ward"
+        android:name="com.loginov.hospital.main.ward.one.WardFragment"
+        android:label="@string/title_person"
+        tools:layout="@layout/fragment_person_list" >
+        <action
+            android:id="@+id/action_navigation_ward_to_navigation_create_person"
+            app:destination="@id/navigation_person_create"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_person_list"
+        android:name="com.loginov.hospital.main.person.PersonFragment"
+        android:label="@string/title_person"
+        tools:layout="@layout/fragment_person_list" />
+
+    <fragment
+        android:id="@+id/navigation_diagnosis_list"
+        android:name="com.loginov.hospital.main.diagnosis.DiagnosisFragment"
+        android:label="@string/title_diagnosis"
+        tools:layout="@layout/fragment_diagnosis_list" />
+
+    <fragment
+        android:id="@+id/navigation_person_create"
+        android:name="com.loginov.hospital.main.person.create.PersonCreateFragment"
+        android:label="@string/title_person"
+        tools:layout="@layout/fragment_create_person" />
+</navigation>

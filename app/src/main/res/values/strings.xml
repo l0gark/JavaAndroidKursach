@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Hospital</string>
+    <string name="title_ward">Палаты</string>
+    <string name="title_person">Заболевшие</string>
+    <string name="title_diagnosis">Диагнозы</string>
+    <string name="ward_max_count">Вместимость палаты: %d</string>
+    <string name="diagnosis_count">Количество заболевших: %d</string>
+    <string name="person_diagnosis">Дигноз: %s</string>
+    <string name="person_ward">Название палаты: %s</string>
+    <string name="ward_name">Название палаты</string>
+    <string name="ok">OK</string>
+    <string name="ward_count">Вместимость палаты</string>
+    <string name="back">Назад</string>
+    <string name="wrong_data">Неверные данные</string>
+    <string name="first_name">Имя</string>
+    <string name="last_name">Фамилия</string>
+    <string name="father_name">Отчество</string>
+    <string name="diagnosis">Диагноз</string>
+</resources>
